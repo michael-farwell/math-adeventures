@@ -1,11 +1,10 @@
 from turtle import *
 
-shape('circle')
+speed('fast')
 
 
 def triangle(length=100):
     """
-    Exercise 1-3: Tri and tri again
     Draws a triangle given a side length
     """
     for i in range(3):
@@ -47,6 +46,21 @@ def spiral(start_length=5):
         right(5)
 
 
-spiral()
+def star(length=100):
+    """
+    Draws a 5-pointed star
+    """
+    for i in range(5):
+        forward(length)
+        right(144)
+
+
+def star_spiral(start_length=5):
+    for i in range(60):
+        star(start_length + (5 * i))
+        right(5)
+
+
+star_spiral()
 
 Screen().exitonclick()
